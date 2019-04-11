@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdb5ec2e-dfb2-4c4a-920e-f7de78001b86" name="Default Changelist" comment="一个简单的后台管理系统">
-      <change afterPath="$PROJECT_DIR$/sql/menuinfo.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/menuinfo_role.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/roleinfo.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/user_role.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/userinfo.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Day10_spring_mvc_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Day10_spring_mvc_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_11_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" afterDir="false" />
+    <list default="true" id="bdb5ec2e-dfb2-4c4a-920e-f7de78001b86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day10_spring_mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Day10_spring_mvc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/一个简单的后台管理系统.patch" beforeDir="false" afterPath="$PROJECT_DIR$/一个简单的后台管理系统.patch" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,26 +15,7 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/一个简单的后台管理系统.patch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -114,11 +83,16 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554971820590" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554972411977" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\自己笔记\java-1807\第三阶段\Day10_spring_mvc\sql" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -220,7 +194,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554965002046</updated>
       <workItem from="1554965003242" duration="4235000" />
-      <workItem from="1554971074943" duration="745000" />
+      <workItem from="1554971074943" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="第二">
       <created>1554965932243</created>
@@ -236,15 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1554970263156</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="一个简单的后台管理系统">
+      <created>1554971876485</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554971876485</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4980000" />
+    <option name="totallyTimeSpent" value="5860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25737265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -263,13 +243,13 @@
       <window_info anchor="bottom" id="Find" order="5" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32843137" />
-      <window_info anchor="bottom" id="Application Servers" order="8" visible="true" weight="0.14730878" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.3696884" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.72875816" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.827534" weight="0.5506536" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Inspection" order="15" weight="0.4" />
       <window_info anchor="bottom" id="Problems" order="16" />
       <window_info anchor="bottom" id="JRebel Executor" order="17" />
@@ -292,16 +272,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第二" />
-    <option name="LAST_COMMIT_MESSAGE" value="第二" />
+    <MESSAGE value="一个简单的后台管理系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="一个简单的后台管理系统" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/userinfo.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-427" />
@@ -325,10 +299,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/一个简单的后台管理系统.patch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="30">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

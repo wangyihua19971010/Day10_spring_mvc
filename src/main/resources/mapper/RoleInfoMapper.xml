@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gz.dao.mapper.RoleMapper">
+     <!--增加-->
+   <insert id="getAdd" parameterType="com.gz.dao.pojo.UserInfo" >
+       insert into userinfo(username,name,email,status) values (#{username},#{name},#{email},1)
+   </insert>
+
+    <!--删除-->
+    <update id="getDelete" parameterType="com.gz.dao.pojo.UserInfo" >
+        update userinfo set status=0 where userId = #{userId}
+    </update>
+
+    <!--修改-->
+    <select id="getupdateUserInfo" parameterType="int" resultType="com.gz.dao.pojo.UserInfo">
+         SELECT * from userinfo where userId = #{userId} and status = 1
+    </select>
+    <update id="getAmend" parameterType="com.gz.dao.pojo.UserInfo">
+        UPDATE userinfo
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name}
+            </if>
+        </set>
+        where userId = #{userId}
+    </update>
+
+    <select id="getRCount" resultType="int" parameterType="com.gz.vo.RoleVo">
+        select count(*) from roleinfo where status = 1
+        <if test="rolename!=null and rolename !=''">
+            and rolename = #{rolename}
+        </if>
+    </select>
+
+    <select id="getPageBy" parameterType="com.gz.vo.RoleVo" resultType="com.gz.dao.pojo.RoleInfo">
+        SELECT * from roleinfo where status = 1
+        <if test="rolename!=null and rolename !=''">
+            and rolename = #{rolename}
+        </if>
+        limit #{splitePageBean.start},#{splitePageBean.pageSize}
+    </select>
+</mapper>

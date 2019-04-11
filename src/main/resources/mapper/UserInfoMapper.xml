@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gz.dao.mapper.UserMapper">
+    <!--创建一对多映射-->
+    <resultMap id="userInfoMap" type="com.gz.dao.pojo.UserInfo">
+        <id property="userId" column="userId"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="status" column="status"/>
+        <collection property="roleInfos" ofType="com.gz.dao.pojo.RoleInfo">
+            <id property="roleid" column="roleid"/>
+            <result property="rolename" column="rolename"/>
+        </collection>
+    </resultMap>
+
+
+    <select id="getUserInfoMapById" resultMap="userInfoMap" parameterType="int">
+        select *
+        from userinfo u,user_role ur,roleinfo r where u.userid = #{id} and u.status=1
+        and ur.status = 1 and ur.userid = u.userid and r.roleid = ur.roleid
+    </select>
+
+    <select id="loginCheck" parameterType="com.gz.dao.pojo.UserInfo" resultType="com.gz.dao.pojo.UserInfo">
+        SELECT * from userinfo where status = 1 and username = #{username} and password = #{password}
+    </select>
+
+    <!--查询所有-->
+    <select id="getAll" parameterType="com.gz.dao.pojo.UserInfo" resultType="com.gz.dao.pojo.UserInfo">
+        SELECT * from userinfo where status = 1
+        <if test="username!=null and username !=''">
+            and username = #{username}
+        </if>
+        <if test="password!=null and password !=''">
+            and password = #{password}
+        </if>
+        <if test="name!=null and name !=''">
+            and name = #{name}
+        </if>
+        <if test="email!=null and email !=''">
+            and email = #{email}
+        </if>
+        <if test="userId!=null and userId !=''">
+            and userId = #{userId}
+        </if>
+    </select>
+
+     <!--增加-->
+   <insert id="getAdd" parameterType="com.gz.dao.pojo.UserInfo" >
+       insert into userinfo(username,name,email,status) values (#{username},#{name},#{email},1)
+   </insert>
+
+    <!--删除-->
+    <update id="getDelete" parameterType="com.gz.dao.pojo.UserInfo" >
+        update userinfo set status=0 where userId = #{userId}
+    </update>
+
+
+    <!--修改-->
+    <select id="getupdateUserInfo" parameterType="int" resultType="com.gz.dao.pojo.UserInfo">
+         SELECT * from userinfo where userId = #{userId} and status = 1
+    </select>
+    <update id="getAmend" parameterType="com.gz.dao.pojo.UserInfo">
+        UPDATE userinfo
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name}
+            </if>
+        </set>
+        where userId = #{userId}
+    </update>
+
+    <select id="getCount" resultType="int" parameterType="com.gz.vo.UserInfoVo">
+        select count(*) from userinfo where status = 1
+        <if test="username!=null and username !=''">
+            and username = #{username}
+        </if>
+        <if test="name!=null and name !=''">
+            and name = #{name}
+        </if>
+        <if test="email!=null and email !=''">
+            and email = #{email}
+        </if>
+    </select>
+
+    <select id="getUserInfosPageBy" parameterType="com.gz.vo.UserInfoVo" resultType="com.gz.dao.pojo.UserInfo">
+        SELECT * from userinfo where status = 1
+        <if test="username!=null and username !=''">
+            and username = #{username}
+        </if>
+        <if test="name!=null and name !=''">
+            and name = #{name}
+        </if>
+        <if test="email!=null and email !=''">
+            and email = #{email}
+        </if>
+        limit #{splitePageBean.start},#{splitePageBean.pageSize}
+    </select>
+
+</mapper>

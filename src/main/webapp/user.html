@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="GB18030">
+  <head>
+    <meta charset="GB18030">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+	.tree li {
+        list-style-type: none;
+		cursor:pointer;
+	}
+	table tbody tr:nth-child(odd){background:#F4F4F4;}
+	table tbody td:nth-child(even){color:#C00;}
+	</style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div><a class="navbar-brand" style="font-size:32px;" href="#">众筹平台 - 用户维护</a></div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li style="padding-top:8px;">
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default btn-success dropdown-toggle" data-toggle="dropdown">
+					<i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
+				  </button>
+					  <ul class="dropdown-menu" role="menu">
+						<li><a href="#"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
+						<li class="divider"></li>
+						<li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+					  </ul>
+			    </div>
+			</li>
+            <li style="margin-left:10px;padding-top:8px;">
+				<button type="button" class="btn btn-default btn-danger">
+				  <span class="glyphicon glyphicon-question-sign"></span> 帮助
+				</button>
+			</li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+			<div class="tree">
+				<ul style="padding-left:0px;" class="list-group">
+					<li class="list-group-item tree-closed" >
+						<a href="main.html"><i class="glyphicon glyphicon-dashboard"></i> 控制面板</a> 
+					</li>
+					<li class="list-group-item">
+						<span><i class="glyphicon glyphicon glyphicon-tasks"></i> 权限管理 <span class="badge" style="float:right">3</span></span> 
+						<ul style="margin-top:10px;">
+							<li style="height:30px;">
+								<a href="user.html" style="color:red;"><i class="glyphicon glyphicon-user"></i> 用户维护</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="role.html"><i class="glyphicon glyphicon-king"></i> 角色维护</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="permission.html"><i class="glyphicon glyphicon-lock"></i> 许可维护</a> 
+							</li>
+						</ul>
+					</li>
+					<li class="list-group-item tree-closed">
+						<span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge" style="float:right">3</span></span> 
+						<ul style="margin-top:10px;display:none;">
+							<li style="height:30px;">
+								<a href="auth_cert.html"><i class="glyphicon glyphicon-check"></i> 实名认证审核</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="auth_adv.html"><i class="glyphicon glyphicon-check"></i> 广告审核</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="auth_project.html"><i class="glyphicon glyphicon-check"></i> 项目审核</a> 
+							</li>
+						</ul>
+					</li>
+					<li class="list-group-item tree-closed">
+						<span><i class="glyphicon glyphicon-th-large"></i> 业务管理 <span class="badge" style="float:right">7</span></span> 
+						<ul style="margin-top:10px;display:none;">
+							<li style="height:30px;">
+								<a href="cert.html"><i class="glyphicon glyphicon-picture"></i> 资质维护</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="type.html"><i class="glyphicon glyphicon-equalizer"></i> 分类管理</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="process.html"><i class="glyphicon glyphicon-random"></i> 流程管理</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="advertisement.html"><i class="glyphicon glyphicon-hdd"></i> 广告管理</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="message.html"><i class="glyphicon glyphicon-comment"></i> 消息模板</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="project_type.html"><i class="glyphicon glyphicon-list"></i> 项目分类</a> 
+							</li>
+							<li style="height:30px;">
+								<a href="tag.html"><i class="glyphicon glyphicon-tags"></i> 项目标签</a> 
+							</li>
+						</ul>
+					</li>
+					<li class="list-group-item tree-closed" >
+						<a href="param.html"><i class="glyphicon glyphicon-list-alt"></i> 参数管理</a> 
+					</li>
+				</ul>
+			</div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+				<h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
+			  </div>
+			  <div class="panel-body">
+<form class="form-inline" role="form" style="float:left;">
+  <div class="form-group has-feedback">
+	  <div class="input-group">
+		  <div class="input-group-addon" >用户名</div>
+		  <input class="form-control has-success" type="text" placeholder="请输入用户名" id="usernametxt">
+		  <div class="input-group-addon" >邮箱</div>
+		  <input class="form-control has-success" type="text" placeholder="请输入邮箱" id="emailtxt">
+		  <div class="input-group-addon">名称</div>
+		  <input class="form-control has-success" type="text" placeholder="请输入名称" id="nametxt">
+	  </div>
+  </div>
+  <button type="button" class="btn btn-warning" onclick="initPage(1)"><i class="glyphicon glyphicon-search"></i> 查询</button>
+</form>
+<button  type="button"  id="del_model" class="btn btn-danger" style="float:right;margin-left:10px;"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
+<button type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='add.html'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
+<br>
+ <hr style="clear:both;">
+          <div class="table-responsive">
+            <table class="table  table-bordered" id="dataTable">
+              <thead>
+                <tr >
+                  <th width="30">#</th>
+				  <th width="30"  class="tal"><input  id="allChk"  type="checkbox"></th>
+                  <th>账号</th>
+                  <th>名称</th>
+                  <th>邮箱地址</th>
+                  <th width="100">操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                </tr>
+              </tbody>
+			</table>
+		  </div>
+
+				<div>
+				<table>
+				<tfoot>
+				<tr >
+                  <td colspan="6" align="center">
+                      <ul class="pagination" id = "pagination">
+                          <li class="disabled"><a href="#">上一页</a></li>
+                          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a href="#">下一页</a></li>
+                      </ul>
+				  </td>
+				</tr>
+				</tfoot>
+				</table>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  </div>
+	</div>
+    <script src="jquery/jquery-2.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="script/docs.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+			    $(".list-group-item").click(function(){
+				    if ( $(this).find("ul") ) {
+						$(this).toggleClass("tree-closed");
+						if ( $(this).hasClass("tree-closed") ) {
+							$("ul", this).hide("fast");
+						} else {
+							$("ul", this).show("fast");
+						}
+					}
+				});
+            });
+            // $("tbody .btn-success").click(function(){
+            //     window.location.href = "assignRole.html";
+            // });
+            // $("tbody .btn-primary").click(function(){
+            //     window.location.href = "edit.html";
+
+			$(document).ready(function() {
+			// 全选
+				$("#allChk").click(function() {
+					$("input[name='subChk']").prop("checked",this.checked);
+				});
+			// 单选
+				var subChk = $("input[name='subChk']")
+				subChk.click(function() {
+					$("#allChk").prop("checked", subChk.length == subChk.filter(":checked").length ? true:false);
+				});
+				/* 批量删除 */
+				$("#del_model").click(function() {
+			// 判断是否至少选择一项
+					var checkedNum = $("input[name='subChk']:checked").length;
+					if(checkedNum == 0) {
+						alert("请选择至少一项！");
+						return;
+					}
+			// 批量选择
+					if(confirm("确定要删除所选项目？")) {
+						var checkedList = new Array();
+						$("input[name='subChk']:checked").each(function() {
+							checkedList.push($(this).val());
+						});
+						var a = checkedList.toString().split(",");
+						$.ajax({
+							type: "POST",
+							url: "UserRoleId",
+							contentType: "application/json; charset=utf-8",
+							data: JSON.stringify({
+								"cuserId":a
+							}),
+							success: function(result) {
+								if(result==true){
+									window.location.href="user.html";
+								}
+							},
+							dataType: 'json',
+							error: function (message) {
+								console.log(message);
+							}
+						});
+					}
+				});
+			});
+
+			// 显示用户列表
+			function initPage(currentPage) {
+				$("#dataTable tr:not(:first)").empty("");
+
+				var usernametxt = $("#usernametxt").val().trim();
+				var nametxt = $("#nametxt").val().trim();
+				var emailtxt = $("#emailtxt").val().trim();
+
+				$.ajax({
+					type: 'POST',
+					url: 'userInfoList',
+					contentType: "application/json; charset=utf-8",
+					data: JSON.stringify({
+						"username":usernametxt,
+						"name":nametxt,
+						"email":emailtxt,
+						"splitePageBean":{
+							"currentPage":currentPage,
+							"pageSize":2
+						}
+					}),
+					success:function (response) {
+						console.log(response);
+						var splitePageBean = response.splitePageBean;
+						var str ="";
+						$("#pagination").empty();
+						// alert(splitePageBean.currentPage);
+
+						if(splitePageBean.currentPage==1){
+							str = "<li class=\"disabled\"><a href=\"#\">上一页</a></li>";
+						}else{
+							str = "<li><a href=\"#\" onclick='initPage("+(splitePageBean.currentPage-1)+")'>上一页</a></li>";
+			}
+
+						for(var i=1;i<=splitePageBean.pageCount;i++){
+							if(i==splitePageBean.currentPage){
+								str += "<li class=\"active\"><a href=\"#\" onclick='initPage("+i+")'>"+i+"</a></li>"
+							}else {
+								str += "<li><a href=\"#\" onclick='initPage("+i+")'>"+i+"</a></li>"
+							}
+						}
+						if(splitePageBean.currentPage==splitePageBean.pageCount){
+							str += "<li class=\"disabled\" ><a href=\"#\">下一页</a></li>";
+						}else{
+							str += "<li><a href=\"#\" onclick='initPage("+(splitePageBean.currentPage+1)+")'>下一页</a></li>";
+						}
+						$("#pagination").html(str);
+						$(response.userInfoList).each(function (index, item) {
+							$("<tr>" +
+									"<td>" + item.userId + "</td>" +
+									"<td><input type=\"checkbox\" name=\"subChk\" value=" + item.userId + "></td>" +
+									"<td>" + item.username + "</td>" +
+									"<td>" + item.name + "</td>" +
+									"<td>" + item.email + "</td>" +
+									"<td>" +
+									"<button type=\"button\" onclick='getRoleById("+item.userId+")' class=\"btn btn-success btn-xs\"><i class=\" glyphicon glyphicon-check\"></i></button>" +
+									"<button type=\"button\" onclick='jumpToEdit(" + item.userId + ")' class=\"btn btn-primary btn-xs\"><i class=\" glyphicon glyphicon-pencil\"></i></button>" +
+									"<button id='"+item.userId+"' type=\"button\" onclick='getdelete(" + item.userId + ")' class=\"btn btn-danger btn-xs\"><i class=\" glyphicon glyphicon-remove\"></i></button>" +
+									"</td>" +
+									"</tr>").insertAfter($("#dataTable tr:eq(1)"));
+						})
+
+					},
+					error: function (response) {
+						console.log(response)
+					}
+				});
+			}
+
+			initPage(1);
+
+			//删除
+            function getdelete(userId) {
+				$.ajax({
+					type: 'POST',
+					url: 'deleteUserInfo',
+					contentType: "application/json; charset=utf-8",
+					data: JSON.stringify({
+						"userId":userId
+					}),
+					success: function(responseText){
+                       console.log(responseText);
+                       //3.根据后台的返回结果刷新当前界面
+						if(responseText==true){
+							window.location.href="user.html";
+						}
+
+					}
+				})
+			}
+
+			//携带Id
+            function jumpToEdit(userId) {
+				// alert(userId);
+                var url = "edit.html?userId="+userId;
+                window.location.href = url;
+            	}
+
+			//携带Id
+			function getRoleById(userId) {
+				// alert(userId);
+				var url = "assignRole.html?userId="+userId;
+				window.location.href = url;
+			}
+
+
+           // 搜索查询
+			//刷新当前页面
+			function flushThisPage() {
+
+				//1.取到查询的条件值
+				var usernametxt = $("#usernametxt").val().trim();
+				var nametxt = $("#nametxt").val().trim();
+				var emailtxt = $("#emailtxt").val().trim();
+
+				//2.将取到的值传到后台
+				$.ajax({
+					type: 'POST',
+					url: 'userInfoList',
+					contentType: "application/json; charset=utf-8",
+					data: JSON.stringify({
+						"username":usernametxt,
+						"name":nametxt,
+						"email":emailtxt
+					}),
+					success: function(responseText){
+
+//                        console.log(responseText);
+						//3.根据后台的返回结果刷新当前界面
+						//3.1清空表格
+						$("#dataTable  tr:not(:first)").empty("");
+						//3.2将对应数据填充到表格中
+						$(responseText).each(function (index,item) {
+							$("<tr>"+
+									"<td>"+item.userId+"</td>"+
+									"<td><input type=\"checkbox\"></td>"+
+									"<td>"+item.username+"</td>"+
+									"<td>"+item.name+"</td>"+
+									"<td>"+item.email+"</td>"+
+									"<td>"+
+									"<button type=\"button\" class=\"btn btn-success btn-xs\"><i class=\" glyphicon glyphicon-check\"></i></button>"+
+									"<button type=\"button\" onclick='jumpToEdit("+item.userId+")' class=\"btn btn-primary btn-xs\"><i class=\" glyphicon glyphicon-pencil\"></i></button>"+
+									"<button type=\"button\" class=\"btn btn-danger btn-xs\"><i class=\" glyphicon glyphicon-remove\"></i></button>"+
+									"</td>"+
+								"</tr>").insertAfter($("#dataTable tr:eq(1)"));
+						})
+					},
+					error: function (message) {
+						console.log(message);
+					},
+					dataType: 'json'
+				});
+			}
+       // document.getElementById("loginform").submit();
+       // var type = $(":selected").val();
+       // if ( type == "user" ) {
+       //     window.location.href = "main.html";
+       // } else {
+       //     window.location.href = "member.html";
+       // }
+        </script>
+  </body>
+</html>

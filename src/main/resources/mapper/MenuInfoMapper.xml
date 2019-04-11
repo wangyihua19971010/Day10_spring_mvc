@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gz.dao.mapper.MenuInfoMapper">
+    <resultMap id="menuInfoMap" type="com.gz.dto.MenuInfoDto">
+        <id column="menuid" property="id"/>
+        <result column="menuname" property="name"/>
+        <result column="menupath" property="url"/>
+        <result column="menuicon" property="icon"/>
+        <result column="parentid" property="pid"/>
+        <result column="checked" property="checked"/>
+        <collection property="children" ofType="com.gz.dto.MenuInfoDto">
+            <id column="cid" property="id"/>
+            <result column="cname" property="name"/>
+            <result column="cpath" property="url"/>
+            <result column="cicon" property="icon"/>
+            <result column="cpid" property="pid"/>
+            <result column="checked" property="checked"/>
+        </collection>
+    </resultMap>
+
+    <select id="getAllMenu" resultMap="menuInfoMap" parameterType="int">
+        select tb1.*,rm.status checked from (SELECT m1.*,m2.menuid cid,m2.menuname cname,
+        m2.menupath cpath,m2.menuicon cicon,m2.parentid cpid
+        from menuinfo m1,menuinfo m2  where m1.menuid = m2.parentid) tb1
+        left join menuinfo_role rm on tb1.cid = rm.menuid where rm.roleid = #{roleid}
+    </select>
+</mapper>

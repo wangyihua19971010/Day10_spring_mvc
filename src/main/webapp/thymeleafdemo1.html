@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>thymeleafdemo1</title>
+</head>
+<body>
+    <!--/*@thymesVar id="username" type=""*/-->
+    <!--替换文本 th:text="#{home.welcome}"-->
+    <p th:text="|你好，世界。。。${userinfo.username}|">今天陈柯旭还没来。。。怕是昨晚大战秀念失败了。。。</p>
+    hello world
+    <br/>
+    <ul th:object="${userinfo}">
+        <li th:text="*{username}">1</li>
+        <li th:utext="*{name}">1</li>
+        <li th:text="*{password}">1</li>
+        <li th:text="*{email}">1</li>
+    </ul>
+
+    <p th:text="${val1}">aaaaa</p>
+    <br/>
+    <p th:if="${userinfo ne null}">true</p>
+    <p th:unless="${userinfo eq null}">false</p>
+
+    <ol th:switch="${userinfo.username}">
+        <li th:case="'吕小凯'">
+            班长
+        </li>
+        <li th:case="'陈柯旭'">
+            组长之一
+        </li>
+        <li th:case="*">
+            组员
+        </li>
+    </ol>
+</body>
+</html>
